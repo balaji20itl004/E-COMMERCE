@@ -1,0 +1,42 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    
+}
+
+.header{
+    color: black;
+    background-color: #ffc7c7;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+
+.section2,li,ol{
+    background-color: #ffe2e2;
+    padding: 10px;
+    display:flex;
+    justify-content: center;
+    font-family: helvetica;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.section3,.section4{
+    background-color: blanchedalmond;
+    padding: 20px;    
+    font-family: georgia;
+}
+
+#footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+   
+}

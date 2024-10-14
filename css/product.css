@@ -1,0 +1,112 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.header{
+    background-color: #ffc7c7;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section2,ul,li{
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    font-family:"Poppins", sans-serif;
+
+   
+}
+
+.section3,.section4,.section5,.section6,.specifications{
+    background-color: #f6f6f6;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.section6{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.specifications ol li{
+display: flex;
+
+}
+
+.section2 a{
+    text-decoration: none;
+    position: relative;
+    color: black;
+}
+
+.section6 a{
+    text-decoration: none;
+    position: relative;
+    color: black;
+}
+
+.footer a{
+    text-decoration: none;
+    position: relative;
+    color: rgb(201, 192, 192)
+}
+
+
+.footer a:hover{
+    color: aqua;
+    cursor: pointer;
+}
+
+a:hover{
+text-decoration: none;
+}
+
+.footer{
+    background-color:#131A22;
+    color:white;
+    font: inherit;
+}
+
+.section2 a:hover{
+    color: blueviolet;
+}
+
+.section6 a:hover{
+    color: darkgreen;
+}
+
+.uno{
+    padding: 20px;
+}
+
+.mega{
+    padding: 20px;
+}
+
+.nodemcu{
+    padding: 20px;
+    text-align: center;
+}
+
+.pi5{
+    padding: 20px;
+}
+
+.pi4{
+    padding: 20px;
+}
+
+.header{
+    position: sticky;
+    top: 0%;
+}
+
+.section2{
+    display: hidden;
+    top: 100px;
+}

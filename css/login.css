@@ -1,0 +1,51 @@
+*{
+    margin: 0%;
+    padding: 0%
+}
+
+#header{
+    background-color: #FFC7C7;
+    padding: 20px;
+}
+
+#section2{
+    background-color: #FFE2E2;
+    padding: 10px;
+    text-align: center;
+    font-family: Roboto Mono;
+}
+
+#section3{
+    background-color: #FFE2E2;
+    padding: 10px;
+    text-align: center;
+    font-family: Roboto Mono;
+}
+
+
+.footer,.eee{
+    background-color: black;
+    color: white;
+}
+
+
+p{
+    padding: 7px;
+}
+
+a{
+    text-decoration: none;
+    position: relative;
+    color: black;
+}
+
+.footer a{
+    color:  rgb(201, 192, 192)
+}
+
+.footer,ul,li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
