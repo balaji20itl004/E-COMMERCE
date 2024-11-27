@@ -6,119 +6,138 @@
     <title>Arduino UNO - RS Electronics</title>
     <link rel="icon" href="C:\Users\Admin\Desktop\e commerce\images\rs logo 2copy.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="C:\Users\Admin\Desktop\e commerce\css\product.css">
+    <link rel="stylesheet" href="css/product.css">
 </head>
 <body>
-    <div class="header">
-        <div>
-            <a href="C:\Users\Admin\Desktop\e commerce\home.html">
-             <img src="C:\Users\Admin\Desktop\e commerce\images\logo.png" width="25%" height="20%"></a>
-        </div>
-        <div class="search">
-            <form>
-                <input type="search" placeholder="enter the product">
-            </form>
-        </div>
-    </div>
-   
+    <header>
+        <nav class="nav">
+                <a href="./home.html">
+                    <img src="./images/logo.png" alt="RS Electronics Logo" class="logo">
+                </a>
+                <div class="nav-links">
+                    <a href="./home.html">Home</a>
+                    <a href="#">My Account</a>
+                    <a href="login.html">Login / Signup</a>
+                    <a href="./contactus.html">Contact Us</a>
+                </div>
 
-    <div class="section2" style="background-color: #ffe2e2;">
-           
-        <ul>
-            <li><a href="C:\Users\Admin\Desktop\e commerce\home.html">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Privacy Policy</a></li> 
-            <li><a href="#">Terms & Conditions</a></li> 
-            <li><a href="C:\Users\Admin\Desktop\e commerce\contactus.html">Contact Us</a></li> 
-            <li><a href="#">Shipping Methods</a></li>
-        </ul>
-           
-    </div>
+                <div class="iconcart">
+                    <img src="images/cart.png" >
+                    <div class="totalquantity">0</div>
+                </div>
+        </nav>
+       
+    </header>
 
-    <div class="section3">
-        <form>
-            CATEGORIES <select name="products">
-                <option value="ARDUINO">ARDUINO</option>
-                <option value="BATTERY & POWERSUPPLY">BATTERY & POWERSUPPLY</option>
-                <option value="COMPONENTS">COMPONENTS</option>
-                <option value="DEVELOPMENT BOARDS">DEVELOPMENT BOARDS</option>
-                <option value="DRONE PARTS">DRONE PARTS</option>
-                <option value="IC'S">IC'S</option>
-                <option value="IOT">IOT</option>
-                <option value="LCD DISPLAY">LCD DISPLAY</option>
-                <option value="PROTOTYPING">PROTOTYPING</option>
-                <option value="RASPBERRY PI">RASPBERRY PI</option>
-                <option value="ROBOTICS">ROBOTICS</option>
-                <option value="SENSORS">SENSORS</option>
-                <option value="TOOLS & HARDWARE">TOOLS & HARDWARE</option>
-            </select>
-               
-        </form>
-    </div>
-
+<div class="sections-container">
     <div class="section4">
-        <center>
-            <img src="C:\Users\Admin\Desktop\e commerce\images\uno.png" width="250" height="250">
+            <img src="images/uno.png" width="250" height="250">
             <h3>ARDUINO UNO R3</h3>
-            <strike>₹ 845.00</strike> <BIG><b>Now ₹ 800.00</BIG></b>
-            <BR><BR>
-            ENTER THE NUMBER OF ITEM <input type="number" placeholder="NUMBER OF ITEM"  ><BR><BR>
-            ENTER THE PINCODE <INPUT type="number" placeholder="ENTER THE PINCODE" ><BR><BR>
-            <input TYPE="submit">
-        </center>
+            <span>Now ₹ 800.00</span>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="buy-now">BUY NOW</button>
+
+
+            <div class="input-fields" style="display: none;">
+                <label for="items">Enter the Number of Items:</label>
+                <input id="items" type="number" placeholder="Number of Items">
+                
+                <label for="pincode">Enter the Pincode:</label>
+                <input id="pincode" type="number" placeholder="Enter the Pincode">
+                
+                <input type="submit" value="Submit">
+            </div>
     </div>
 
     <div class="section5">
-        <H3>DESCRIPTION</H3>
-        <p>The Uno is a microcontroller board based on the ATmega328P. It has 14 digital input/output pins (of which 6 can be used as PWM outputs), 6 analog inputs, a 16 MHz quartz crystal, a USB connection, a power jack, an ICSP header and a reset button. It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with an AC-to-DC adapter or battery to get started.
-        <BR>
-        </div> 
-      
-        <div class="specifications">
-        <UL>
-           <b><LI>SPECIFICATIONS</b><br><br>
-                <ol>
-                    <LI>ATmega328 microcontroller</LI>
-                    <LI>Input voltage - 7 - 12V</LI>
-                    <LI>14 Digital I/O Pins (6 PWM outputs)</LI>
-                    <LI>6 Analog Inputs</LI>
-                    <LI>32k Flash Memory</LI>
-                    <LI>16 MHz Clock Speed</LI>
-                </ol>
-            </LI>
-        </UL>
+        <h3>DESCRIPTION</h3>
+        <p>The Uno is a microcontroller board based on the ATmega328P. It has 14 digital input/output pins (of which 6 can be used as PWM outputs), 6 analog inputs, a 16 MHz quartz crystal, a USB connection, a power jack, an ICSP header and a reset button. It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with an AC-to-DC adapter or battery to get started.</p>
+        <ul>
+            <b><li>SPECIFICATIONS</b>
+                 <ul>
+                     <li>ATmega328 microcontroller</li>
+                     <li>Input voltage - 7 - 12V</li>
+                     <li>14 Digital I/O Pins (6 PWM outputs)</li>
+                     <li>6 Analog Inputs</li>
+                     <li>32k Flash Memory</li>
+                     <li>16 MHz Clock Speed</li>
+                 </ul>
+                </li>
+            </ul>
+    </div>   
+</div>
+
+<div class="reviews">
+    <h4>Customer Reviews</h4>
+    <div class="review">
+        <p><strong>saravana:</strong> - Excellent performance, very reliable!</p>
+        <p><strong>Durga:</strong> - Totally satisfied with this product. Worth the price!</p>
+        <p><strong>shanmuga raj:</strong> - Amazing quality and fast shipping. Highly recommend!</p>
+        <p><strong>David Warner:</strong> - I have been using this for a month now, and it works perfectly!</p>
+        <p><strong>leo:</strong> - The product exceeded my expectations. Very happy with my purchase!</p>
+        <p><strong>Aiden markaram:</strong> - Good value for money. Works as advertised. No issues so far!</p>
+        <p><strong>Steve Smith:</strong> - Quick delivery and great product. Would buy again!</p>
     </div>
-   
+    <div class="review-form">
+        <input type="text" placeholder="Write your review">
+        <button>Submit Review</button>
+    </div>
+ </div>
 
-    <div class="section6">
+ <div class="section6">
+    <h3>Related products</h3>
 
-        <h3>Related products:</h3>
-
-        <div class="mega">
-            <img src="C:\Users\Admin\Desktop\e commerce\images\arduino_mega.png"width="150" height="150">  
-            <a href="C:\Users\Admin\Desktop\e commerce\mega.html"><figcaption>Arduino Uno R3</figcaption>    
-            <p><strike>₹ 6200.00</strike> <b>Now ₹ 4000.00</b></p></a>
+    <div class="product-container">
+        <div class="uno">
+            <img src="images/uno.png" width="150" height="150">  
+            <a href="UNO.html"><figcaption>Arduino Uno R3</figcaption>    
+            <p><b>Now ₹ 800.00</b></p></a>
         </div>
 
         <div class="nodemcu">
-            <img src="C:\Users\Admin\Desktop\e commerce\images\NODEMCU.png"width="150" height="150">  
-            <a href="C:\Users\Admin\Desktop\e commerce\ESP.html"><figcaption>Arduino Uno R3</figcaption>    
-            <p><strike>₹ 999.00</strike> <b>Now ₹ 499.00</b></p></a>
+            <img src="images/NODEMCU.png" width="150" height="150">  
+            <a href="ESP.html"><figcaption>Arduino Uno R3</figcaption>    
+            <p><b>Now ₹ 499.00</b></p></a>
         </div>
 
         <div class="pi5">
-            <img src="C:\Users\Admin\Desktop\e commerce\images\raspberry-pi-5.png" width="150" height="150">
-            <a href="C:\Users\Admin\Desktop\e commerce\pi5.html"><figcaption>Raspberry Pi 5 8GB Model B – Original</figcaption>
-            <p><strike>₹ 6999.00</strike> <b>Now ₹ 6499.00</b></p></a>
+            <img src="images/raspberry-pi-5.png" width="150" height="150">
+            <a href="pi5.html"><figcaption>Raspberry Pi 5 8GB Model B – Original</figcaption>
+            <p><b>Now ₹ 6499.00</b></p></a>
         </div>
 
         <div class="pi4">
-            <img src="C:\Users\Admin\Desktop\e commerce\images\raspberry-pi_4-.png" width="150" height="150">
-            <a href="C:\Users\Admin\Desktop\e commerce\pi4.html"><figcaption>Raspberry-pi 4 4GB Model B </figcaption>
-            <p><strike>₹ 5999.00</strike> <b>Now ₹ 5499.00</b></p></a>
+            <img src="images/raspberry-pi_4-.png" width="150" height="150">
+            <a href="pi4.html"><figcaption>Raspberry-pi 4 4GB Model B</figcaption>
+            <p><b>Now ₹ 5499.00</b></p></a>
         </div>
-        <br>
+
+        <!-- Repeat Products -->
+        <div class="uno">
+            <img src="images/uno.png" width="150" height="150">  
+            <a href="UNO.html"><figcaption>Arduino Uno R3</figcaption>    
+            <p><b>Now ₹ 800.00</b></p></a>
+        </div>
+
+        <div class="nodemcu">
+            <img src="images/NODEMCU.png" width="150" height="150">  
+            <a href="ESP.html"><figcaption>Arduino Uno R3</figcaption>    
+            <p><b>Now ₹ 499.00</b></p></a>
+        </div>
+
+        <div class="pi5">
+            <img src="images/raspberry-pi-5.png" width="150" height="150">
+            <a href="pi5.html"><figcaption>Raspberry Pi 5 8GB Model B – Original</figcaption>
+            <p><b>Now ₹ 6499.00</b></p></a>
+        </div>
+
+        <div class="pi4">
+            <img src="images/raspberry-pi_4-.png" width="150" height="150">
+            <a href="pi4.html"><figcaption>Raspberry-pi 4 4GB Model B</figcaption>
+            <p><b>Now ₹ 5499.00</b></p></a>
+        </div>
     </div>
+</div>
 
     <div class="footer">
         <nav class="INFORMATION">
@@ -134,46 +153,8 @@
         </nav>
             <h3> © 2024 RS Electronics Kovilpatti. All Rights Reserved</h3>
     </div>
+
+
+    <script src="javascript/product.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-

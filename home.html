@@ -4,92 +4,349 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - RS Electronics</title>
-    <link rel="icon" href="./images/rs logo 2copy.jpg">
-    <link rel="stylesheet" href="C:\Users\Admin\Desktop\e commerce\css\index.css">
+    <link rel="icon" href="images/rs logo 2copy.jpg">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
 </head>
 <body>
-        <div class="nav">
-                <a href="C:\Users\Admin\Desktop\e commerce\home.html">      
-                    <img src="C:\Users\Admin\Desktop\e commerce\images\logo.png" width="30%" height="20%"></a>    
-                </div>
-            
-            <div class="none">
-            <div><a href="C:\Users\Admin\Desktop\e commerce\home.html">Home</a></div>
-            <div><a href="#">My Account</a></div>
-            <div><a href="C:\Users\Admin\Desktop\e commerce\login.html">Login / signup</a></div>
-            <div><a href="C:\Users\Admin\Desktop\e commerce\contactus.html">Contact Us</a></div>
-        </div>
-    
-    
-  
+<header>
+    <nav class="nav">
+            <a href="./home.html">
+                <img src="./images/logo.png" alt="RS Electronics Logo" class="logo">
+            </a>
+            <div class="nav-links">
+                <a href="./home.html">Home</a>
+                <a href="#">My Account</a>
+                <a href="login.html">Login / Signup</a>
+                <a href="./contactus.html">Contact Us</a>
+            </div>
+            <div class="nav-search">
+                <input type="text" id="search" placeholder="Search products...">
+                
+                <button id="clear-search"><i class="fas fa-times"></i></button>
+                <ul id="suggestions" class="suggestions"></ul>
+               
+            </div>
+    </nav>
+   
+</header>
 
-    <div class="section2"> 
+    <section class="category-section">
         <form>
-            CATEGORIES <select name="products">
+            <label for="categories">CATEGORIES:</label>
+            <select name="products" id="categories">
                 <option value="ARDUINO">ARDUINO</option>
                 <option value="MODULES">MODULES</option>
                 <option value="BATTERY & POWERSUPPLY">BATTERY & POWERSUPPLY</option>
                 <option value="COMPONENTS">COMPONENTS</option>
-                <option value="DEVELOPMENT BOARDS">DEVELOPMENT BOARDS</option>
                 <option value="DRONE PARTS">DRONE PARTS</option>
                 <option value="IC'S">IC'S</option>
-                <option value="IOT">IOT</option>
                 <option value="LCD DISPLAY">LCD DISPLAY</option>
-                <option value="PROTOTYPING">PROTOTYPING</option>
                 <option value="RASPBERRY PI">RASPBERRY PI</option>
-                <option value="ROBOTICS">ROBOTICS</option>
                 <option value="SENSORS">SENSORS</option>
-                <option value="TOOLS & HARDWARE">TOOLS & HARDWARE</option>
             </select>
-        </form><br>
+        </form>
 
-   <div class="search">
-        <input type="search" placeholder="enter the product">  
-    </div>
-  
-    </div>
-    
-    <h3 style="color: red; background-color: #f6f6f6;">Top Trending sales:</h3>
+    </section>
 
-<div class="section3">
-      
-    <div class="uno">
-        <img src="C:\Users\Admin\Desktop\e commerce\images\uno.png"width="150" height="150">  
-        <a href="C:\Users\Admin\Desktop\e commerce\UNO.html"><figcaption>Arduino Uno R3</figcaption>    
-        <p><strike>₹ 845.00</strike> <b>Now ₹ 800.00</b></p></a>
-    </div>
+    <div class="slider">
+        <div class="list">
+            <div class="item">
+                <img src="images/arduino banner.jpg" alt="">
+            </div>
 
-    <div class="mega">
-        <img src="C:\Users\Admin\Desktop\e commerce\images\arduino_mega.png"width="150" height="150">  
-        <a href="C:\Users\Admin\Desktop\e commerce\mega.html"><figcaption>Arduino Mega 2560 R3 ORIGINAL</figcaption>    
-        <p><strike>₹ 6200.00</strike> <b>Now ₹ 4000.00</b></p></a>
-    </div>
+            <div class="item">
+                <img src="images/batterybaner.jpg" alt="">
+            </div>
 
-    <div class="nodemcu">
-        <img src="C:\Users\Admin\Desktop\e commerce\images\NODEMCU.png"width="150" height="150">  
-        <a href="C:\Users\Admin\Desktop\e commerce\ESP.html"><figcaption>NODEMCU - ESP8266 Wifi Board based on CP2102 IC</figcaption>    
-        <p><strike>₹ 999.00</strike> <b>Now ₹ 499.00</b></p></a>
-    </div>
+            <div class="item">
+                <img src="images/banner3.png" alt="">
+            </div>
 
-    <div class="pi5">
-        <img src="C:\Users\Admin\Desktop\e commerce\images\raspberry-pi-5.png" width="150" height="150">
-        <a href="C:\Users\Admin\Desktop\e commerce\pi5.html"><figcaption>Raspberry Pi 5 8GB Model B – Original</figcaption>
-        <p><strike>₹ 6999.00</strike> <b>Now ₹ 6499.00</b></p></a>
-    </div>
-
-    <div class="pi4">
-        <img src="C:\Users\Admin\Desktop\e commerce\images\raspberry-pi_4-.png" width="150" height="150">
-        <a href="C:\Users\Admin\Desktop\e commerce\pi4.html"><figcaption>Raspberry-pi 4 4GB Model B </figcaption>
-        <p><strike>₹ 5999.00</strike> <b>Now ₹ 5499.00</b></p></a>
+            <div class="item">
+                <img src="images/raspberry pi banner.jpg" alt="">
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <ul class="dots">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
 
-</div>
+<!--product section-->
 
-    <div class="footer">
-        <h3> © 2024 RS Electronics Kovilpatti. All Rights Reserved</h3>
+    <h3 class="trending-title">Top Trending Sales</h3>
+
+    <section class="product-grid">
+        
+        <div class="product-card" data-name="Arduino Uno R3">
+            <img src="./images/uno.png" alt="Arduino Uno R3">
+            <a href="./UNO.html">
+                <figcaption>Arduino Uno R3</figcaption>
+                
+                <p><b class="discount-price">Now ₹ 800.00</b></p>
+            </a>
+            
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
+        <div class="product-card" data-name="nodemcu">
+            <img src="images/NODEMCU.png" alt="nodemcu">
+            <a href="ESP.html">
+                <figcaption>NODEMCU - ESP8266 Wifi Board based on CP2102 </figcaption>
+                <p> <b class="discount-price">Now ₹ 799.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="raspberry pi 4">
+            <img src="images/raspberry-pi_4-.png" alt="raspberry pi 4">
+            <a href="pi4.html">
+                <figcaption>Raspberry Pi 4 8GB Model B – Original</figcaption>
+                <p> <b class="discount-price">Now ₹ 6499.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="raspberry pi 5">
+            <img src="images/raspberry-pi-5.png" alt="raspberry pi 5">
+            <a href="pi5.html">
+                <figcaption>Raspberry-pi 5 4GB Model A </figcaption>
+                <p> <b class="discount-price">Now ₹ 5499.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="us sensor">
+            <img src="images/hc sr04.jpeg" alt="us sensor">
+            <a href="ultrasonic.html">
+                <figcaption>Ultrasonic Distance Sensor - 5V (HC-SR04)</figcaption>
+                <p> <b class="discount-price">Now ₹ 69.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="Detection sensor">
+            <img src="images/sensor1.png" alt="Detection sensor">
+            <a href="detection.html">
+                <figcaption>DC3.3V-5V UV Detection Sensor Module For Arduino Sensor</figcaption>
+                <p><b class="discount-price">Now ₹ 799.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="light sensor">
+            <img src="images/s2.png" alt="light sensor">
+            <a href="lightsensor.html">
+                <figcaption>DFRobot Fermion: AS7341 11-Channel Visible Light Sensor (Breakout)</figcaption>
+                <p> <b class="discount-price">Now ₹ 1749.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        
+        <div class="product-card" data-name="Arduino Mega 2560 R3">
+            <img src="./images/arduino_mega.png" alt="Arduino Mega 2560 R3">
+            <a href="./mega.html">
+                <figcaption>Arduino Mega 2560 R3 ORIGINAL</figcaption>
+                <p> <b class="discount-price">Now ₹ 4000.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Additional product cards here -->
+
+        <div class="product-card" data-name="3.7V 3000Mah Rechargeable Li-Ion Battery">
+            <img src="images/battery1.jpeg" alt="3.7V 3000Mah Rechargeable Li-Ion Battery">
+            <a href="battery1.html">
+                <figcaption>3.7V 3000Mah Rechargeable Li-Ion Battery</figcaption>
+                <p> <b class="discount-price">Now ₹ 150.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
+        <div class="product-card" data-name="12V 1.3 Ah Lead Acid Battery">
+            <img src="images/battery2.jpg" alt="12V 1.3 Ah Lead Acid Battery">
+            <a href="battery2.html">
+                <figcaption>12V 1.3 Ah Lead Acid Battery</figcaption>
+                <p> <b class="discount-price">Now ₹ 800.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="400 mAh 3.7V single cell LiPo Battery">
+            <img src="images/battery3.jpg" alt="400 mAh 3.7V single cell LiPo Battery">
+            <a href="battery3.html">
+                <figcaption>400 mAh 3.7V single cell LiPo Battery</figcaption>
+                <p> <b class="discount-price">Now ₹ 240.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="EBL 4-Pack 9V Batteries Li-ion 9 Volt">
+            <img src="images/battery4.jpeg" alt="EBL 4-Pack 9V Batteries Li-ion 9 Volt">
+            <a href="battery4.html">
+                <figcaption>EBL 4-Pack 9V Batteries Li-ion 9 Volt</figcaption>
+                <p> <b class="discount-price">Now ₹ 4500.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="Panasonic Pro AA Ni-MH 4-Battery Pack">
+            <img src="images/battery5.jpg" alt="Panasonic Pro AA Ni-MH 4-Battery Pack">
+            <a href="battery5.html">
+                <figcaption>Panasonic Pro AA Ni-MH 4-Battery Pack</figcaption>
+                <p> <b class="discount-price">Now ₹ 1200.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
+        <div class="product-card" data-name="MC33172 IC">
+            <img src="images/ic1.webp" alt="MC33172 IC">
+            <a href="ic1.html">
+                <figcaption> MC33172 Low Power Dual Bipolar Operational Amplifiers</figcaption>
+                <p> <b class="discount-price">Now ₹ 99.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
+        <div class="product-card" data-name="4HC161 4-Bit IC">
+            <img src="images/ic2.webp" alt="4HC161 4-Bit IC">
+            <a href="ic2.html">
+                <figcaption>4HC161 4-Bit Presettable Synchronous Binary Counter IC7</figcaption>
+                <p> <b class="discount-price">Now ₹ 149.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
+        <div class="product-card" data-name="85pcs 10 Types Integrated Circuit Chip IC Chips ">
+            <img src="images/ic3.webp" alt="85pcs 10 Types Integrated Circuit Chip IC Chips ">
+            <a href="ic3.html">
+                <figcaption>85pcs 10 Types Integrated Circuit Chip IC Chips Assortment Kit OPAMP Single Precision Timer</figcaption>
+                <p> <b class="discount-price">Now ₹ 999.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
+        <div class="product-card" data-name="77590-11 AMPLIFIER IC (ORIGINAL)">
+            <img src="images/ic4.jpg" alt="77590-11 AMPLIFIER IC (ORIGINAL)">
+            <a href="ic4.html">
+                <figcaption>77590-11 AMPLIFIER IC (ORIGINAL)</figcaption>
+                <p> <b class="discount-price">Now ₹ 199.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
+        <div class="product-card" data-name="1602 (16x2) LCD Display">
+            <img src="images/lcd1.jpg" alt="1602 (16x2) LCD Display">
+            <a href="lcd1.html">
+                <figcaption>1602 (16x2) LCD Display with I2C/IIC interface - Blue Backlight</figcaption>
+                <p> <b class="discount-price">Now ₹ 149.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
+        <div class="product-card" data-name="Touch LCD Display">
+            <img src="images/lcd2.webp" alt="Touch LCD Display">
+            <a href="lcd2.html">
+                <figcaption>WaveShare 2.8inch Resistive Touch LCD Display 320×240 SPI Interface</figcaption>
+                <p> <b class="discount-price">Now ₹ 1699.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
+        <div class="product-card" data-name=" 1.5inch LCD Display">
+            <img src="images/lcd3.webp" alt=" 1.5inch LCD Display">
+            <a href="lcd3.html">
+                <figcaption>WaveShare 1.5inch LCD Display Module 240x280 IPS Panel SPI Interface</figcaption>
+                <p> <b class="discount-price">Now ₹ 1399.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
+        <div class="product-card" data-name=" F450 450mm Quadcopter Frame Kit (Drone)">
+            <img src="images/drone1.webp" alt=" F450 450mm Quadcopter Frame Kit (Drone)">
+            <a href="drone1.html">
+                <figcaption>F450 450mm Quadcopter Frame Kit (Drone)</figcaption>
+                <p> <b class="discount-price">Now ₹ 9399.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
+        <div class="product-card" data-name=" F450 Drone Frame Kit 4-axis Quadcopter Frame Kit(Drone)">
+            <img src="images/drone2.webp" alt=" F450 Drone Frame Kit 4-axis Quadcopter Frame Kit (Drone)">
+            <a href="drone2.html">
+                <figcaption>Youngrc F450 Drone Frame Kit 4-axis Quadcopter Frame Kit </figcaption>
+                <p> <b class="discount-price">Now ₹ 2499.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
+        <div class="product-card" data-name=" DJI(Drone)">
+            <img src="images/drone3.jpg" alt=" DJI(Drone)">
+            <a href="drone3.html">
+                <figcaption>DJI FPV Drone Foldable Landing Gear: Durable Spare Parts for Smooth Takeoffs and Landings </figcaption>
+                <p> <b class="discount-price">Now ₹ 9499.00</b></p>
+            </a>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </section>
+
+
+    <div class="sticky-cart-icon">
+        <img src="./images/cart.png" alt="Cart Icon" class="cart-icon">
+        <div class="cart-tooltip">
+            <p><b>Items in Cart:</b> <span id="cart-count">0</span></p>
+            <button onclick="viewCart()">View Cart</button>
+        </div>
+
+
         
     </div>
+    
+    <div id="cart-menu" style="display:none;">
+        <div id="cart-items"></div>
+        <div>Total Price: ₹<span id="total-price">0.00</span></div>
+        <button id="checkout">Checkout</button>
+        <button id="close-cart">Close Cart</button>
+    </div>
+    <div id="cart-count">0</div>
+    
 
+    <div id="overlay"></div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>© 2024 RS Electronics Kovilpatti. All Rights Reserved</h3>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+<script src="javascript/home.js"></script> 
 </body>
 </html>

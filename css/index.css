@@ -1,95 +1,671 @@
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.nav{
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    line-height: 1.6;
+}
+
+.logo {
+    width: 300px;
+}
+
+
+.nav {
     background-color: #ffc7c7;
-    padding: 7px;
+    padding: 10px 20px;
     display: flex;
-    align-items: center;
-}
-
-.none {
-    display: flex;
-   justify-content: center;
-background-color: #ffc7c7;
-font-family: Arial;
-
-}
-
-.none a{
-    text-decoration: none;
-    color: black;
-}
-
-
-
-.none div{
-    margin: 10px;
-}
-
-.section2{
-    background-color: #ffe2e2;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
-form{
-    padding: 20px;
-    text-align: left;
+/* Navigation links container */
+.nav-links {
     display: flex;
+    gap: 10px;
 }
 
 
-.section3{
-   font-family: Arial; 
-   display: flex;
-   padding: 50px;
-   text-align: center;
-   background-color: #f6f6f6;
-   flex-wrap: wrap;
+.nav-links a {
+    margin: 0 10px;
+    text-decoration: none; /* Ensures no underline is applied by default */
+    color: black; /* Default text color */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    padding: 5px 10px; /* Padding for better hover effect */
+}
+
+.nav-links a:hover {
+    color: black; /* Text color changes to black on hover */
+    background-color:lightblue; /* Background color turns blue */
+    border-radius: 4px; /* Rounded corners */
+    transform: translateY(-5px) scale(1.1); /* Upward movement and slight scaling */
+    text-shadow: 0 2px 4px rgba(0, 0, 255, 0.3); /* Light text shadow */
+}
+
+/* Active state */
+
+
+/* Pseudo-element for animated square border */
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent; /* Initial transparent border */
+    border-radius: 8px; /* Optional: rounded square corners */
+    transition: all 0.4s ease;
+    transform: scale(0.8); /* Start small */
+    opacity: 0;
+}
+
+/* Hover effect for the square border */
+.nav-links a:hover::before {
+    border-color: lightblue; /* Border color on hover */
+    transform: scale(1); /* Grow to full size */
+    opacity: 1;
+}
+
+.nav-search {
+    display: flex;
+    align-items: center;
+    position: relative; /* Make the container a positioning context */
+}
+
+
+.nav-search input {
+    padding: 5px 35px 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    padding-right: 45px;
+    
+}
+
+.nav-search button {
+    background-color: #ffc7c7;
+    border: none;
+    cursor: pointer;
+    
+}
+
+
+
+/* Clear Search Button */
+#clear-search {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    width: 25px; /* Fixed width */
+    height: 25px; /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; 
+}
+
+
+/* Icon inside the button */
+#clear-search i {
+    color: #666; /* Neutral icon color */
    
 }
 
-.uno{
+/* Hover effect for the icon */
+#clear-search:hover i {
+    color: #b31010; /* Change icon color on hover */
+}
+
+
+.suggestions {
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    top: 50px;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: calc(100% - 20px); /* Matches the input width */
+    z-index: 1000;
+    display: none; /* Initially hidden *//
+}
+
+.suggestions li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    
+}
+
+.suggestions li:hover {
+    background-color: #f4f4f4;
+}
+
+
+/*category-section*/
+
+.category-section {
+    display: flex;
+    justify-content: space-between; 
+    padding: 25px;
+    background-color: #ffe2e2;
+}
+
+.category-section form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+form {
+    display: inline-flex; 
+    align-items: center;
+    flex-wrap: nowrap; 
+}
+
+select {
+    margin-left: 10px;
+}
+
+
+/* Sliding Banner (Carousel) */
+/* Slider Container */
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    height: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* List of Items */
+.slider .list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+/* Each Item in the Slider */
+.slider .item {
+    flex: 0 0 100%;
+    text-align: center;
+    width: 100%;
+}
+
+/* Images in the Slider */
+.slider .item img {
+    width: 100%;        /* Fill the container's width */
+    height: 100%;       /* Fill the container's height */
+    object-fit: cover;  /* Make sure the image covers the entire space without distortion */
+    border: 5px solid #fff;  /* White border around the image */
+    border-radius: 10px; /* Rounded corners for the images */
+}
+
+/* Navigation Buttons */
+.slider .buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider .buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    outline: none;
+}
+
+.slider .buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots (Indicators) */
+.slider .dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.slider .dots li {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider .dots li.active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
+/* products section */
+
+.trending-title {
+    font-size: 2rem;
+    color: red;
+    padding: 10px;
+    text-align: center;
+
+}   
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     padding: 20px;
 }
 
-.mega{
-    padding: 20px;
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 25%;
 }
 
-.nodemcu{
-    padding: 20px;
+.product-card a {
+    display: block;
+    margin-bottom: 5px; /* Adjust spacing between elements */
+}
+
+.discount-price {
+    display: none; /* Hide the price by default */
+}
+
+/* Default style for the discount price */
+.discount-price {
+    color: red;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(10px); /* Start position */
+    transition: opacity 0.3s, transform 0.3s;
+    
+}
+
+/* Show and animate the discount price on hover */
+.product-card:hover .discount-price {
+    animation: bounce 0.6s ease, fade-in 0.3s ease;
+    opacity: 1;
+    transform: translateY(0); /* End position */
+}
+
+
+.product-card:hover .discount-price {
+    display: inline-block; /* Show the price on hover */
+}
+
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.product-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.add-to-cart {
+    background-color: #ffc7c7;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+   box-shadow: 0 10px 10px #000; 
+}
+
+.add-to-cart:hover {
+    background-color: #ff9999;
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff9999;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+/* Animation keyframes */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+/* Focus styles for navigation links */
+.nav-links a:focus {
+    outline: 3px dashed lightblue; /* Clear focus indicator */
+    outline-offset: 4px; /* Space between the outline and the element */
+    background-color: lightblue; /* Optional: Change background color on focus */
+    color: black; /* Ensure text is legible */
+}
+
+/* Focus styles for buttons */
+button:focus,
+.add-to-cart:focus,
+#clear-search:focus {
+    outline: 3px solid #ff9999; /* Solid outline for focus */
+    outline-offset: 4px; /* Space between the outline and the button */
+    background-color: #ffcccc; /* Optional: Change background color on focus */
+    transform: scale(1.05); /* Slightly enlarge for visual feedback */
+}
+
+/* Focus styles for carousel buttons */
+.slider .buttons button:focus {
+    outline: 2px solid white; /* High-contrast outline */
+    outline-offset: 4px; /* Space between the outline and button */
+    background-color: rgba(255, 255, 255, 0.8); /* Lighter background */
+    color: black; /* Make text more visible */
+}
+
+/* Focus styles for footer social links */
+.social-links a:focus {
+    outline: 2px dashed #ff9999; /* Dashed outline for focus */
+    outline-offset: 3px; /* Space between outline and element */
+    color: #ff9999; /* Optional: Change text color on focus */
+}
+
+.cart-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-size: 16px;
+}
+
+/* Sticky Cart Icon */
+.sticky-cart-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffc7c7;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Cart Icon Image */
+.sticky-cart-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Hover Effect */
+.sticky-cart-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Tooltip */
+.cart-tooltip {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    background-color: #ffe2e2;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    display: none; /* Initially hidden */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1100;
+}
+
+/* Tooltip Visibility */
+.sticky-cart-icon:hover .cart-tooltip {
+    display: block;
+}
+
+/* Tooltip Button */
+.cart-tooltip button {
+    background-color: #ffc7c7;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    width: 100%;
     text-align: center;
 }
 
-.pi5{
+.cart-tooltip button:hover {
+    background-color: #ff9999;
+}
+
+/* Tooltip Text */
+.cart-tooltip p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Cart Menu Container */
+#cart-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    background-color: white;
     padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    height: 100%;
+    display: none; /* Initially hidden, toggle with JavaScript */
+    z-index: 999;
 }
 
-.pi4{
-    padding: 20px;
+/* Cart Items List */
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
 }
 
-.section3 a{
-    text-decoration: none;
-    color: black;
+/* Cart Item Styling */
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
+    word-wrap: break-word; /* Ensures long product names wrap */
 }
 
-.nav a{
-    text-decoration: none;
-    color: black;
+/* Product Name Style */
+#cart-items li .product-name {
+    flex: 1;  /* Allow product name to grow and wrap within the available space */
+    margin-right: 10px;
+    white-space: normal;
 }
 
-.none a:hover{
-    color: blue;
+/* Quantity Control Style */
+#cart-items li .quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Item Price and Total Price Style */
+#cart-items li .item-total,
+#cart-items li .product-price {
+    min-width: 60px;
+    text-align: right;
+}
+
+/* Remove Button */
+#cart-items li .remove {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
     cursor: pointer;
 }
-.footer{
-    background-color: black;
-    align-items: center;
-    color: white;
+
+/* Hover effect for remove button */
+#cart-items li .remove:hover {
+    background-color: darkred;
 }
+
+/* Total Price Section */
+#total-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Checkout & Close Cart Button Styling */
+#checkout, #close-cart {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Hover effect for buttons */
+#checkout:hover, #close-cart:hover {
+    background-color: #45a049;
+}
+
+
+/* Style for cart items */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Styling for price */
+.product-price {
+    margin-right: 15px; /* Adjust this value to create space between price and quantity */
+}
+
+/* Styling for quantity */
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+/* Add space between quantity buttons and the total price */
+.quantity button {
+    margin: 0 5px; /* Add space between + and - buttons and the quantity text */
+}
+
+.item-total {
+    margin-left: 20px; /* Adjust space between total price and quantity */
+}
+
