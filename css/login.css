@@ -205,3 +205,53 @@ button:hover{
 .footer-content a {
     font-weight: 500; /* Ensure text is visually balanced */
 }
+
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px;
+       
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+       
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .login-wrapper {
+        
+        width: 70%; /* Adjusted for smaller screens */
+        padding: 20px;
+    }
+
+    form h3 {
+        font-size: 1.3rem; /* Smaller heading */
+    }
+
+    .input-box input {
+        font-size: 0.8rem; /* Adjust font size */
+       
+    }
+
+    .password-options {
+        flex-direction: row;
+        
+    }
+
+    button {
+        padding: 10px 15px;
+    }
+
+    .footer {
+        padding: 10px 0;
+    }
+}
+

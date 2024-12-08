@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arduino UNO - RS Electronics</title>
+    <title>3.7V 3000Mah Rechargeable Li-Ion Battery - R.S Electronics</title>
     <link rel="icon" href="images/rs logo 2copy.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="css/product.css">
@@ -16,7 +16,7 @@
                 </a>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
-                    <a href="#">My Account</a>
+                    <a href="myaccount.html">My Account</a>
                     <a href="login.html">Login / Signup</a>
                     <a href="./contactus.html">Contact Us</a>
                 </div>
@@ -39,13 +39,19 @@
 
 
             <div class="input-fields" style="display: none;">
-                <label for="items">Enter the Number of Items:</label>
-                <input id="items" type="number" placeholder="Number of Items">
-                
-                <label for="pincode">Enter the Pincode:</label>
-                <input id="pincode" type="number" placeholder="Enter the Pincode">
-                
-                <input type="submit" value="Submit">
+                <form action="payment.html" method="post">
+                    <label for="items">Enter the Number of Items:</label>
+                    <input id="items" name="items" type="number" placeholder="Number of Items" required>
+                    
+                    <label for="pincode">Enter the Pincode:</label>
+                    <input id="pincode" name="pincode" type="number" placeholder="Enter the Pincode" required>
+                    
+                    <!-- Hidden Fields for Product Details -->
+                    <input id="product-name" name="product_name" type="hidden" value="">
+                    <input id="product-price" name="product_price" type="hidden" value="">
+                    
+                    <input type="submit" value="Submit">
+                </form>
             </div>
     </div>
 
@@ -91,31 +97,32 @@
     <h3>Related products</h3>
 
     <div class="product-container">
-        <div class="uno">
-            <img src="images/uno.png" width="150" height="150">  
-            <a href="UNO.html"><figcaption>Arduino Uno R3</figcaption>    
+    
+        <!-- Repeat Products -->
+
+        <div class="battery2">
+            <img src="images/battery2.jpg" width="150" height="150">  
+            <a href="battery2.html"><figcaption>12V 1.3 Ah Lead Acid Battery</figcaption>    
             <p><b>Now ₹ 800.00</b></p></a>
         </div>
 
-        <div class="nodemcu">
-            <img src="images/NODEMCU.png" width="150" height="150">  
-            <a href="ESP.html"><figcaption>Arduino Uno R3</figcaption>    
-            <p><b>Now ₹ 499.00</b></p></a>
+        <div class="battery3">
+            <img src="images/battery3.jpg" width="150" height="150">  
+            <a href="battery3.html"><figcaption>400 mAh 3.7V single cell LiPo Battery</figcaption>    
+            <p><b>Now ₹ 240.00</b></p></a>
         </div>
 
-        <div class="pi5">
-            <img src="images/raspberry-pi-5.png" width="150" height="150">
-            <a href="pi5.html"><figcaption>Raspberry Pi 5 8GB Model B – Original</figcaption>
-            <p><b>Now ₹ 6499.00</b></p></a>
+        <div class="battery4">
+            <img src="images/battery4.jpeg" width="150" height="150">
+            <a href="battery4.html"><figcaption>EBL 4-Pack 9V Batteries Li-ion 9 Volt</figcaption>
+            <p><b>Now ₹ 4500.00</b></p></a>
         </div>
 
-        <div class="pi4">
-            <img src="images/raspberry-pi_4-.png" width="150" height="150">
-            <a href="pi4.html"><figcaption>Raspberry-pi 4 4GB Model B</figcaption>
-            <p><b>Now ₹ 5499.00</b></p></a>
+        <div class="battery5">
+            <img src="images/battery5.jpg" width="150" height="150">
+            <a href="pi4.html"><figcaption>Panasonic Pro AA Ni-MH 4-Battery Pack</figcaption>
+            <p><b>Now ₹ 1200.00</b></p></a>
         </div>
-
-        <!-- Repeat Products -->
         <div class="uno">
             <img src="images/uno.png" width="150" height="150">  
             <a href="UNO.html"><figcaption>Arduino Uno R3</figcaption>    

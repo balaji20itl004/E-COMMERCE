@@ -18,7 +18,7 @@
             </a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="#">My Account</a>
+                <a href="myaccount.html">My Account</a>
                 <a href="login.html">Login / Signup</a>
                 <a href="./contactus.html">Contact Us</a>
             </div>
@@ -33,23 +33,9 @@
    
 </header>
 
-    <section class="category-section">
-        <form>
-            <label for="categories">CATEGORIES:</label>
-            <select name="products" id="categories">
-                <option value="ARDUINO">ARDUINO</option>
-                <option value="MODULES">MODULES</option>
-                <option value="BATTERY & POWERSUPPLY">BATTERY & POWERSUPPLY</option>
-                <option value="COMPONENTS">COMPONENTS</option>
-                <option value="DRONE PARTS">DRONE PARTS</option>
-                <option value="IC'S">IC'S</option>
-                <option value="LCD DISPLAY">LCD DISPLAY</option>
-                <option value="RASPBERRY PI">RASPBERRY PI</option>
-                <option value="SENSORS">SENSORS</option>
-            </select>
-        </form>
+   
 
-    </section>
+    
 
     <div class="slider">
         <div class="list">
@@ -324,10 +310,12 @@
     </div>
     
     <div id="cart-menu" style="display:none;">
+        <form action="payment.html" >
         <div id="cart-items"></div>
         <div>Total Price: ₹<span id="total-price">0.00</span></div>
         <button id="checkout">Checkout</button>
         <button id="close-cart">Close Cart</button>
+    </form>
     </div>
     <div id="cart-count">0</div>
     

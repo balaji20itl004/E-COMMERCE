@@ -266,26 +266,6 @@ body {
     font-weight: 600;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    .section4 {
-        padding: 20px;
-    }
-
-    .section4 img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .section4 h3 {
-        font-size: 1.4rem;
-    }
-
-    .add-to-cart, .buy-now {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-}
 
 
 /* Add transition effect for input-fields */
@@ -402,24 +382,7 @@ body {
     border-radius: 4px; /* Rounded corners on hover */
 }
 
-/* Media query for responsiveness */
-@media (max-width: 768px) {
-    .section5 {
-        padding: 20px; /* Adjust padding for smaller screens */
-    }
 
-    .section5 h3 {
-        font-size: 1.4rem; /* Smaller font size for heading */
-    }
-
-    .section5 p {
-        font-size: 0.95rem; /* Slightly smaller font for paragraphs */
-    }
-
-    .section5 ul {
-        padding-left: 15px; /* Slightly less indentation on smaller screens */
-    }
-}
 
 
 
@@ -606,18 +569,7 @@ figcaption {
     }
 }
 
-/* Responsive Design for Small Screens */
-@media (max-width: 768px) {
-    .section6 .product-container {
-        flex-wrap: wrap;
-        justify-content: center; /* Center for small screens */
-    }
 
-    .section6 div {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
 
 
 
@@ -678,21 +630,159 @@ figcaption {
 
 
 
-/* Responsive Design */
+/* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
+    /* Body adjustments */
+    body {
+        font-size: 14px; /* Adjust body font size for readability */
+        /* Add some padding to prevent content from touching the edges */
+    }
+
+    /* Logo resizing */
+    .logo {
+        width: 150px; /* Smaller logo for better space management */
+    }
+
+    /* Navigation Bar */
+    .nav {
+        flex-direction: row;
+        align-items: center; /* Center-align for better aesthetics */
+        padding: 10px;
+    }
+
     .nav-links {
-        display: block;
-        margin-top: 15px;
+        flex-direction: row;
+        width: 100%;
+        gap: 10px; /* Increase gap for better touch interaction */
     }
 
-    .section6 {
+    .nav-links a {
+        width: 100%;
+        text-align: center; /* Center text for a more balanced look */
+        padding: 10px 0; /* Padding for better touch targets */
+        font-size: 0.8rem; /* Adjust font size for readability */
+    }
+
+    .nav-search {
+        
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Center the search bar */
+    }
+
+    .nav-search input {
+        width: 90%; /* Make input larger for easier use */
+        padding: 5px;
+    }
+
+    /* Cart icon */
+    .iconcart img {
+        width: 35px; /* Slightly larger icon for better tap target */
+    }
+
+    .nav .totalquantity {
+        font-size: 0.9rem;
+        width: 22px;
+        height: 22px; /* Increase size for better visibility */
+    }
+
+    /* Sections Layout */
+    .sections-container {
         flex-direction: column;
+        gap: 20px;
     }
 
+    /* Section 4: Products */
     .section4 {
+        margin: 0 auto;
+        width: 80%; /* Use full width for better mobile view */
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .section4 img {
+        width: 80%;
+        height: auto;
+    }
+
+    /* Buttons */
+    .add-to-cart, .buy-now {
+        font-size: 0.9rem;
+        padding: 12px 16px; /* Increase button padding for better interaction */
+    }
+
+    /* Section 5: Product Description */
+    .section5 {
+        margin: 0 auto;
+        width: 87%; /* Full width for consistency */
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    /* Section 6: Scrolling Products */
+    .section6 {
+        padding: 15px;
+    }
+
+    .reviews{
+        margin: 0 auto;
+        width: 87%; /* Full width for consistency */
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    
+    .reviews .review p{
+        padding: 5px;
+    }
+
+    
+
+    .review-form input[type="text"] {
+        font-size: 0.9rem;
+        padding: 8px;
+        width: 100%;
+       
+    }
+
+    .review-form button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+        width: 100%;
+    }
+
+    .product-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        animation: none; /* Disable scrolling animation for small screens */
+    }
+
+    .section6 div {
+        width: 100%; /* Full width to avoid overly narrow columns */
+        margin-bottom: 15px;
+    }
+
+    .section6 div img {
+        width: 80%;
+        height: auto;
+    }
+
+    /* Footer */
+    .footer {
         text-align: center;
+        padding: 15px 10px; /* Add horizontal padding */
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem; /* Adjust footer link size */
     }
 }
+
+
 
 
 

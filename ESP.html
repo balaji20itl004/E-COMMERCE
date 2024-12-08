@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arduino UNO - RS Electronics</title>
+    <title>NODEMCU - ESP8266 Wifi Board based on CP2102 IC - RS Electronics</title>
     <link rel="icon" href="images\rs logo 2copy.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="css/product.css">
@@ -39,13 +39,19 @@
 
 
             <div class="input-fields" style="display: none;">
-                <label for="items">Enter the Number of Items:</label>
-                <input id="items" type="number" placeholder="Number of Items">
-                
-                <label for="pincode">Enter the Pincode:</label>
-                <input id="pincode" type="number" placeholder="Enter the Pincode">
-                
-                <input type="submit" value="Submit">
+                <form action="payment.html" method="post">
+                    <label for="items">Enter the Number of Items:</label>
+                    <input id="items" name="items" type="number" placeholder="Number of Items" required>
+                    
+                    <label for="pincode">Enter the Pincode:</label>
+                    <input id="pincode" name="pincode" type="number" placeholder="Enter the Pincode" required>
+                    
+                    <!-- Hidden Fields for Product Details -->
+                    <input id="product-name" name="product_name" type="hidden" value="">
+                    <input id="product-price" name="product_price" type="hidden" value="">
+                    
+                    <input type="submit" value="Submit">
+                </form>
             </div>
     </div>
 

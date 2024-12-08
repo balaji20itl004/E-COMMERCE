@@ -45,3 +45,33 @@
     
 
 
+    const products = [
+        { image: "images/uno.png", name: "Arduino Uno R3", price: "₹ 800.00", link: "UNO.html" },
+        { image: "images/NODEMCU.png", name: "NodeMCU", price: "₹ 499.00", link: "ESP.html" },
+        { image: "images/raspberry-pi-5.png", name: "Raspberry Pi 5 8GB Model B – Original", price: "₹ 6499.00", link: "pi5.html" },
+        { image: "images/raspberry-pi_4-.png", name: "Raspberry-pi 4 4GB Model B", price: "₹ 5499.00", link: "pi4.html" },
+        
+    ];
+    
+    const productContainer = document.querySelector('.product-container');
+    products.forEach(product => {
+        const productHTML = `
+            <div class="product">
+                <img src="${product.image}" width="150" height="150">
+                <a href="${product.link}">
+                    <figcaption>${product.name}</figcaption>
+                    <p><b>Now ${product.price}</b></p>
+                </a>
+            </div>`;
+        productContainer.innerHTML += productHTML;
+    });
+    
+
+
+
+
+
+
+    
+    
+    
